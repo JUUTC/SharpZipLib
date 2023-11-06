@@ -113,6 +113,7 @@ public class Cmd_Tar
 	/// <summary>
 	/// The main entry point of the tar class.
 	/// </summary>
+	[Obsolete]
 	public static void Main(string[] argv)
 	{
 		var tarApp = new Cmd_Tar();
@@ -124,6 +125,7 @@ public class Cmd_Tar
 	/// for the application and then calls this method. Process the arguments
 	/// and perform the requested operation.
 	/// </summary>
+	[Obsolete]
 	public void InstanceMain(string[] argv)
 	{
 		TarArchive archive = null;

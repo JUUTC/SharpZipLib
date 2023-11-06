@@ -1,28 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:Conversion="urn:Conversion" ToolsVersion="14.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DB53264C-64AD-4B43-91A9-F5325561C77B}</ProjectGuid>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>ICSharpCode.SharpZipLib.Samples</RootNamespace>
-    <AssemblyName>viewzipfile</AssemblyName>
     <OutputType>WinExe</OutputType>
-    <ApplicationIcon />
     <WarningLevel />
     <NoWarn />
     <StartupObject>ICSharpCode.SharpZipLib.Samples.ViewZipFileForm</StartupObject>
     <NoStdLib />
     <NoConfig />
     <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
-    <PreBuildEvent />
-    <PostBuildEvent />
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -38,12 +24,13 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <AssemblyTitle>ViewZipFile</AssemblyTitle>
+    <Description>SharpZipLib Sample Project</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>True</DebugSymbols>
     <Optimize>True</Optimize>
     <AllowUnsafeBlocks />
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
@@ -52,46 +39,26 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <NoWarn>42353,42354,42355</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
-    <Optimize>True</Optimize>
     <AllowUnsafeBlocks />
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <DefineConstants />
     <OutputPath>\</OutputPath>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <NoWarn>42353,42354,42355</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="..\SampleAssemblyInfo.vb">
       <Link>SampleAssemblyInfo.vb</Link>
     </Compile>
-    <Compile Include="ViewZipFileForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <EmbeddedResource Include="ViewZipFileForm.resx">
-      <DependentUpon>ViewZipFileForm.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="SharpZipLib">
       <Version>1.3.3</Version>
     </PackageReference>
+    <PackageReference Include="System.ComponentModel.Composition" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -100,8 +67,4 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
 </Project>
